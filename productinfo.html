@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" type="text/css" href="style/enhanced.css" media="screen  and (min-width: 40.5em)" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(w).resize(function(){ //Update dimensions on resize
+  sw = document.documentElement.clientWidth;
+  sh = document.documentElement.clientHeight;
+  checkMobile();
+});
+  
+//Check if Mobile
+function checkMobile() {
+  mobile = (sw > breakpoint) ? false : true;
+
+  if (!mobile) { //If Not Mobile
+    $('[role="tabpanel"],#nav,#search').show(); //Show full navigation and search
+  } else { //Hide 
+    if(!$('#nav-anchors a').hasClass('active')) {
+      $('#nav,#search').hide(); //Hide full navigation and search
+    }
+  }
+}
+</script>
+<title>Product Information</title>
+</head>
+<header>
+			<div class="container">
+				<div id="branding">
+					<h1>Supersports</h1>
+				</div>
+
+<!--Menu-->
+	<nav>
+		<ul class= menu>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Man</a></li>
+			<li><a href="#">Woman</a></li>
+			<li><a href="#">Kids</a></li>
+			<li><a href="#">Sale</a></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Support</a></li>
+  		</ul>
+
+</nav>			
+
+<!--Search bar-->
+		
+
+		</header>
+<body>
+
+
+
+
+<section id="newsletter">
+			<div class="container">
+				<h7>SIGN UP FOR EXCLUSIVE SALES AND PRODUCT NEWS</h7>
+				<form>
+					<input type="email" placeholder="Enter Email...">
+					<button type= "submit" class="button_1">SIGN UP</button>
+			</div>
+		</section>
+</body>
+</html>
