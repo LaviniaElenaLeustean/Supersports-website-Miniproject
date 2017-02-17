@@ -1,0 +1,86 @@
+<div class="container">
+        <div id="branding">
+          <h8>Supersports</h8>
+        </div>
+
+<!--Menu-->
+  <nav class= menu>
+    
+      <a href="index.html">HOME</a>
+      <a href="#">MEN</a>
+      <a href="#">WOMAN</a>
+      <a href="#">KIDS</a>
+      <a href="#">SALE</a>
+      <a href="#">ABOUT US</a>
+      <a href="#contact">SUPPORT</a>
+    
+  </nav>      
+
+    
+
+    </header>
+ <head>
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+    <script src="https://unpkg.com/zone.js@0.6.21?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
+    <script src="https://unpkg.com/systemjs@0.19.27/dist/system.src.js"></script>
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="./css/styles.css">
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+ <!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <style>
+        body     { padding-top:30px; }
+    </style>
+    
+    <script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="validationApp" ng-controller="mainController">
+<div class="container">
+    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+            <label>Name*</label>
+            <input type="text" name="name" class="form-control" ng-model="user.name" required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+        </div>
+
+               <!-- EMAIL -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" ng-model="user.email">
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>
+        
+        <!-- text -->
+        <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+            <label>Message</label>
+            <input type="text" name="message" class="form-control" ng-model="user.message" ng-minlength="3" ng-maxlength="1000">
+            <p ng-show="userForm.message.$error.minlength" class="help-block">Message is too short.</p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block">Message is too long.</p>
+        </div>
+            
+ 
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+    </form>
+    
+ 
+    
+</div>
+</body>
+</html>
+

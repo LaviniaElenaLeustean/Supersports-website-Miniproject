@@ -217,3 +217,34 @@ h3{
 /*Footer*/
 
 
+.menu{
+  display: flex;
+  @media(max-width: 40em){
+  flex-direction:column;
+  }
+a{
+ flex-grow:1;
+ background: white;
+ color: #eb3c00;
+ text-decoration: none;
+ text-transform: uppercase;
+ text-align: center;
+ padding: 15px;
+ border-bottom: 1px solid grey;  
+}
+
+a:active{ 
+    background-color: #eb3c00;
+    color: white;
+}
+
+a:hover{
+  background-color: #eb3c00;
+  color: white;
+}
+
+a:selected{
+  background-color:#eb3c00;
+  color: white;
+}
+}
